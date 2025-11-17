@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>King Fahrschule - Royal Driving School</title>
+    <title>King Fahrschule – Ihre königliche Fahrschule</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="icon"
@@ -20,7 +20,6 @@
   </head>
 
   <body class="gradient-bg text-white">
-    <!-- Navbar -->
     <!-- HEADER -->
     <header
       class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-lg border-b border-yellow-600/20"
@@ -42,11 +41,11 @@
 
         <!-- Desktop navigation -->
         <nav class="hidden md:flex space-x-8 text-sm font-medium">
-          <a href="#training" class="nav-link">Programs</a>
-          <a href="#pricing" class="nav-link">Pricing</a>
-          <a href="#fleet" class="nav-link">Fleet</a>
-          <a href="#testimonials" class="nav-link">Testimonials</a>
-          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#training" class="nav-link">Ausbildung</a>
+          <a href="#pricing" class="nav-link">Preise</a>
+          <a href="#fleet" class="nav-link">Fahrzeuge</a>
+          <a href="#testimonials" class="nav-link">Erfahrungsberichte</a>
+          <a href="#contact" class="nav-link">Kontakt</a>
         </nav>
 
         <!-- Mobile menu button -->
@@ -63,68 +62,19 @@
         id="mobileMenu"
         class="hidden flex flex-col bg-slate-900 border-t border-slate-700 animate-slide-down"
       >
-        <a href="#training" class="mobile-link">Programs</a>
-        <a href="#pricing" class="mobile-link">Pricing</a>
-        <a href="#fleet" class="mobile-link">Fleet</a>
-        <a href="#testimonials" class="mobile-link">Testimonials</a>
-        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#training" class="mobile-link">Ausbildung</a>
+        <a href="#pricing" class="mobile-link">Preise</a>
+        <a href="#fleet" class="mobile-link">Fahrzeuge</a>
+        <a href="#testimonials" class="mobile-link">Erfahrungsberichte</a>
+        <a href="#contact" class="mobile-link">Kontakt</a>
       </div>
     </header>
 
     <!-- Hero -->
     <section id="home" class="my-10 flex items-center pt-24 px-6">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        <!-- Text -->
-        <div class="opacity-0 animate-fade-up">
-          <p
-            class="inline-flex items-center text-xs font-semibold tracking-[0.25em] uppercase text-yellow-400 mb-4"
-          >
-            Drive with confidence • Learn with royalty
-          </p>
-          <h1
-            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight"
-          >
-            <span class="block text-transparent bg-clip-text gold-gradient mb-1"
-              >King Fahrschule</span
-            >
-            <span class="text-slate-100"
-              >Your royal path to driving freedom.</span
-            >
-          </h1>
-          <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-xl">
-            Modern cars, patient instructors, flexible schedules and a premium
-            learning experience. We guide you from your first lesson to your
-            driving license — stress-free and step-by-step.
-          </p>
-
-          <div class="flex flex-wrap gap-4 mb-6">
-            <a
-              href="#contact"
-              class="gold-gradient text-slate-900 px-7 py-3 rounded-full font-semibold text-sm sm:text-base hover:scale-105 transition shine-effect"
-            >
-              Book a trial lesson
-            </a>
-            <a
-              href="#pricing"
-              class="border border-yellow-500 px-7 py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-yellow-600/10 transition"
-            >
-              View pricing
-            </a>
-          </div>
-
-          <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm">
-            <div class="flex items-center space-x-2">
-              <span class="star">★</span><span>98% first-time pass rate</span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <span class="star">★</span><span>Manual & automatic</span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <span class="star">★</span><span>Evenings & weekends</span>
-            </div>
-          </div>
-        </div>
-
+      <div
+        class="max-w-6xl mx-auto grid grid-reverse md:grid-cols-2 gap-10 items-center"
+      >
         <!-- Logo big visual -->
         <div class="flex justify-center md:justify-end">
           <div
@@ -135,22 +85,78 @@
             ></div>
             <img
               src="src/images/logo.png"
-              alt="King Fahrschule main logo"
+              alt="King Fahrschule Logo"
               class="w-full h-auto rounded-3xl mx-auto drop-shadow-2xl animate-pulse-slow"
             />
-            <div class="mt-6 grid grid-cols-3 gap-4 text-xs text-center">
+            <div
+              class="mt-6 grid grid-cols-3 gap-4 text-xs text-center hidden todo"
+            >
               <div>
                 <div class="font-bold text-yellow-400 text-lg">500+</div>
-                <div class="text-slate-300">Students</div>
+                <div class="text-slate-300">Fahrschüler*innen</div>
               </div>
               <div>
                 <div class="font-bold text-yellow-400 text-lg">15+</div>
-                <div class="text-slate-300">Years experience</div>
+                <div class="text-slate-300">Jahre Erfahrung</div>
               </div>
               <div>
-                <div class="font-bold text-yellow-400 text-lg">4.9</div>
-                <div class="text-slate-300">Average rating</div>
+                <div class="font-bold text-yellow-400 text-lg">4,9</div>
+                <div class="text-slate-300">Durchschnittliche Bewertung</div>
               </div>
+            </div>
+          </div>
+        </div>
+        <!-- Text -->
+        <div class="opacity-0 animate-fade-up">
+          <p
+            class="inline-flex items-center text-xs font-semibold tracking-[0.25em] uppercase text-yellow-400 mb-4"
+          >
+            Sicher fahren • Mit königlichem Service lernen
+          </p>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight"
+          >
+            <span class="block text-transparent bg-clip-text gold-gradient mb-1"
+              >King Fahrschule</span
+            >
+            <span class="text-slate-100"
+              >Ihr königlicher Weg zur mobilen Freiheit.</span
+            >
+          </h1>
+          <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-xl">
+            Moderne Fahrzeuge, geduldige Fahrlehrer, flexible Termine und ein
+            hochwertiges Lern­erlebnis. Wir begleiten Sie vom ersten Fahr­stunde
+            bis zum Führerschein – stressfrei und Schritt für Schritt.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mb-6 hidden todo">
+            <a
+              href="#contact"
+              class="gold-gradient text-slate-900 px-7 py-3 rounded-full font-semibold text-sm sm:text-base hover:scale-105 transition shine-effect"
+            >
+              Probestunde buchen
+            </a>
+            <a
+              href="#pricing"
+              class="border border-yellow-500 px-7 py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-yellow-600/10 transition"
+            >
+              Preise ansehen
+            </a>
+          </div>
+
+          <div
+            class="flex flex-wrap items-center gap-6 text-xs sm:text-sm hidden todo"
+          >
+            <div class="flex items-center space-x-2">
+              <span class="star">★</span
+              ><span>98&nbsp;% bestehen direkt beim ersten Mal</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="star">★</span
+              ><span>Schalt- & Automatikfahrzeuge</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="star">★</span><span>Abend- & Wochenendtermine</span>
             </div>
           </div>
         </div>
@@ -158,7 +164,7 @@
     </section>
 
     <!-- Stats -->
-    <section class="py-16 bg-slate-900/60">
+    <section class="py-16 bg-slate-900/60 hidden todo">
       <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
         <div class="text-center opacity-0 animate-fade-up delay-100">
           <div
@@ -166,7 +172,7 @@
           >
             98%
           </div>
-          <div class="text-gray-300 text-sm">Practical exam success</div>
+          <div class="text-gray-300 text-sm">Erfolgsquote Praxisprüfung</div>
         </div>
         <div class="text-center opacity-0 animate-fade-up delay-200">
           <div
@@ -174,7 +180,7 @@
           >
             500+
           </div>
-          <div class="text-gray-300 text-sm">Students trained</div>
+          <div class="text-gray-300 text-sm">Ausgebildete Fahrschüler</div>
         </div>
         <div class="text-center opacity-0 animate-fade-up delay-300">
           <div
@@ -182,122 +188,101 @@
           >
             15+
           </div>
-          <div class="text-gray-300 text-sm">Years of experience</div>
+          <div class="text-gray-300 text-sm">Jahre Erfahrung</div>
         </div>
         <div class="text-center opacity-0 animate-fade-up delay-400">
           <div
             class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text gold-gradient mb-2"
           >
-            4.9
+            4,9
           </div>
-          <div class="text-gray-300 text-sm">Average Google rating</div>
+          <div class="text-gray-300 text-sm">Durchschnittliche Google-Note</div>
         </div>
       </div>
     </section>
+
     <!-- Full Width Image Slider -->
     <section class="w-full py-8 px-8">
-        <div class="max-w-6xl mx-auto">
-
-            <div class="relative overflow-hidden w-full">
-              <div
-                id="heroSlider"
-                class="flex transition-transform duration-700 ease-out"
-              >
-                <div class="slide w-full shrink-0">
-                  <img
-                    src="./src/images/slider-1.jpg"
-                    class="w-full h-[400px] object-cover rounded-2xl"
-                  />
-                </div>
-
-                <div class="slide w-full shrink-0">
-                  <img
-                    src="./src/images/slider-2.jpg"
-                    class="w-full h-[400px] object-cover rounded-2xl"
-                  />
-                </div>
-
-                <div class="slide w-full shrink-0">
-                  <img
-                    src="./src/images/slider-3.jpg"
-                    class="w-full h-[400px] object-cover rounded-2xl"
-                  />
-                </div>
-
-                <div class="slide w-full shrink-0">
-                  <img
-                    src="./src/images/slider-4.png"
-                    class="w-full h-[400px] object-cover rounded-2xl"
-                  />
-                </div>
-
-                <div class="slide w-full shrink-0">
-                  <img
-                    src="./src/images/slider-3.jpg"
-                    class="w-full h-[400px] object-cover rounded-2xl"
-                  />
-                </div>
-              </div>
-
-              <!-- Arrows -->
-              <button
-                onclick="prevSlide()"
-                class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
-              >
-                ❮
-              </button>
-              <button
-                onclick="nextSlide()"
-                class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
-              >
-                ❯
-              </button>
+      <div class="max-w-6xl mx-auto">
+        <div class="relative overflow-hidden w-full">
+          <div
+            id="heroSlider"
+            class="flex transition-transform duration-700 ease-out"
+          >
+            <div class="slide w-full shrink-0">
+              <img
+                src="./src/images/slider-1.jpg"
+                class="w-full h-[400px] object-cover rounded-2xl"
+                alt="Fahrschüler im Auto"
+              />
             </div>
+
+            <div class="slide w-full shrink-0">
+              <img
+                src="./src/images/slider-2.jpg"
+                class="w-full h-[400px] object-cover rounded-2xl"
+                alt="Fahrunterricht"
+              />
+            </div>
+
+            <div class="slide w-full shrink-0">
+              <img
+                src="./src/images/slider-3.jpg"
+                class="w-full h-[400px] object-cover rounded-2xl"
+                alt="Auto der Fahrschule"
+              />
+            </div>
+
+            <div class="slide w-full shrink-0">
+              <img
+                src="./src/images/slider-4.png"
+                class="w-full h-[400px] object-cover rounded-2xl"
+                alt="Innenraum eines Fahrzeugs"
+              />
+            </div>
+
+            <div class="slide w-full shrink-0">
+              <img
+                src="./src/images/slider-3.jpg"
+                class="w-full h-[400px] object-cover rounded-2xl"
+                alt="Auto der Fahrschule"
+              />
+            </div>
+          </div>
+
+          <!-- Arrows -->
+          <button
+            onclick="prevSlide()"
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
+          >
+            ❮
+          </button>
+          <button
+            onclick="nextSlide()"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
+          >
+            ❯
+          </button>
         </div>
+      </div>
     </section>
+
     <!-- Training -->
     <section id="training" class="py-20 px-6">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-14">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
             <span class="text-transparent bg-clip-text gold-gradient"
-              >Our Programs</span
+              >Unsere Ausbildungsangebote</span
             >
           </h2>
           <p class="text-gray-300 max-w-2xl mx-auto">
-            Whether you are a complete beginner or looking to refresh your
-            skills, we have the right program for you.
+            Egal ob Sie ganz neu anfangen oder Ihre Kenntnisse auffrischen
+            möchten – wir haben das passende Programm für Sie.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Standard License -->
-          <div
-            class="glass rounded-2xl p-8 card-hover border border-yellow-600/40 shine-effect opacity-0 animate-fade-up delay-100"
-          >
-            <h3 class="text-2xl font-bold mb-3 text-yellow-400">
-              Standard License (B)
-            </h3>
-            <p class="text-gray-300 mb-6 text-sm">
-              Complete training for new drivers. We guide you through theory and
-              practice at your pace with clear explanations.
-            </p>
-            <ul class="space-y-2 mb-6 text-sm">
-              <li class="flex items-center">
-                <span class="star mr-2">★</span>
-                <span>Minimum 20 hours of driving</span>
-              </li>
-              <li class="flex items-center">
-                <span class="star mr-2">★</span>
-                <span>Theory & road safety preparation</span>
-              </li>
-              <li class="flex items-center">
-                <span class="star mr-2">★</span>
-                <span>Modern manual vehicles</span>
-              </li>
-            </ul>
-          </div>
-
+        <div class="grid md:grid-cols-2 gap-8">
           <!-- Intensive -->
           <div
             class="glass rounded-2xl p-8 card-hover border-2 border-yellow-500 shine-effect relative opacity-0 animate-fade-up delay-200"
@@ -305,54 +290,54 @@
             <div
               class="absolute top-1 left-1/2 -translate-x-1/2 gold-gradient text-slate-900 px-5 py-1 rounded-full text-xs font-bold tracking-wide"
             >
-              MOST POPULAR
+              AM BELIEBTESTEN
             </div>
-            <h3 class="text-2xl font-bold mb-3 text-yellow-400">
-              Intensive Course
+            <h3 class="text-xl font-bold mb-3 text-yellow-400">
+              Führerscheinklasse B
             </h3>
             <p class="text-gray-300 mb-6 text-sm">
-              Perfect if you want to obtain your license fast. Compact,
-              structured and highly efficient sessions.
+              Ideal, wenn Sie Ihren Führerschein schnell und effizient machen
+              möchten. Kompakte, strukturierte und sehr effektive Fahrstunden.
             </p>
             <ul class="space-y-2 mb-6 text-sm">
               <li class="flex items-center">
                 <span class="star mr-2">★</span>
-                <span>License in as little as 2–3 weeks</span>
+                <span>Führerschein in nur 2–3&nbsp;Wochen möglich</span>
               </li>
               <li class="flex items-center">
                 <span class="star mr-2">★</span>
-                <span>Custom schedule (mornings/evenings)</span>
+                <span>Individueller Terminplan (morgens/abends)</span>
               </li>
               <li class="flex items-center">
                 <span class="star mr-2">★</span>
-                <span>Personal progress tracking</span>
+                <span>Persönliche Lernstands- und Fortschrittskontrolle</span>
               </li>
             </ul>
           </div>
-
-          <!-- Refresh / Advanced -->
+          <!-- Standard License -->
           <div
-            class="glass rounded-2xl p-8 card-hover border border-yellow-600/40 shine-effect opacity-0 animate-fade-up delay-300"
+            class="glass rounded-2xl p-8 card-hover border border-yellow-600/40 shine-effect opacity-0 animate-fade-up delay-100"
           >
-            <h3 class="text-2xl font-bold mb-3 text-yellow-400">
-              Refresh & Advanced
+            <h3 class="text-xl font-bold mb-3 text-yellow-400">
+              Führerscheinklasse BE
             </h3>
             <p class="text-gray-300 mb-6 text-sm">
-              Ideal for licensed drivers who feel insecure or want to improve in
-              city traffic, highway or parking.
+              Umfassende Ausbildung für Anhänger­kombinationen. Wir begleiten
+              Sie durch Theorie und Praxis – in Ihrem Tempo und mit klaren
+              Erklärungen.
             </p>
             <ul class="space-y-2 mb-6 text-sm">
               <li class="flex items-center">
                 <span class="star mr-2">★</span>
-                <span>Defensive driving techniques</span>
+                <span>Praxisstunden nach Bedarf, flexibel planbar</span>
               </li>
               <li class="flex items-center">
                 <span class="star mr-2">★</span>
-                <span>Eco-driving and fuel saving</span>
+                <span>Theorie &amp; Sicherheitstraining für Gespanne</span>
               </li>
               <li class="flex items-center">
                 <span class="star mr-2">★</span>
-                <span>City & highway practice</span>
+                <span>Moderne Fahrzeuge mit Anhänger</span>
               </li>
             </ul>
           </div>
@@ -369,46 +354,17 @@
         <div class="text-center mb-14">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
             <span class="text-transparent bg-clip-text gold-gradient"
-              >Transparent Pricing</span
+              >Transparente Preise</span
             >
           </h2>
           <p class="text-gray-300 max-w-2xl mx-auto">
-            No hidden fees. Choose the package that matches your goals and
-            budget. You can always add extra hours later.
+            Keine versteckten Kosten. Wählen Sie das Paket, das zu Ihren Zielen
+            und Ihrem Budget passt. Zusätzliche Fahrstunden können jederzeit
+            hinzugebucht werden.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Essential -->
-          <div
-            class="bg-slate-950/80 rounded-2xl p-8 card-hover border border-yellow-600/40"
-          >
-            <h3 class="text-2xl font-bold mb-2">Essential Pack</h3>
-            <div
-              class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text gold-gradient mb-6"
-            >
-              890€
-            </div>
-            <ul class="space-y-3 mb-2 text-sm">
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>20 hours of practical driving</span>
-              </li>
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>Theory & online material included</span>
-              </li>
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>Registration & administration fees</span>
-              </li>
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>1 practical exam appointment</span>
-              </li>
-            </ul>
-          </div>
-
+        <div class="flex flex-wrap justify-center">
           <!-- Royal -->
           <div
             class="bg-gradient-to-b from-yellow-600/15 to-slate-950/90 rounded-2xl p-8 card-hover border-2 border-yellow-500 relative transform md:scale-105"
@@ -416,72 +372,28 @@
             <div
               class="absolute -top-4 left-1/2 -translate-x-1/2 gold-gradient text-slate-900 px-5 py-1 rounded-full text-xs font-bold tracking-wide"
             >
-              RECOMMENDED
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Royal Pack</h3>
-            <div
-              class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text gold-gradient mb-6"
-            >
-              1290€
+              EMPFEHLUNG
             </div>
             <ul class="space-y-3 mb-2 text-sm">
               <li class="flex items-start">
                 <span class="star mr-2 mt-1">✓</span>
-                <span>30 hours of practical driving</span>
+                <span>30 Fahrstunden in der Praxis</span>
               </li>
               <li class="flex items-start">
                 <span class="star mr-2 mt-1">✓</span>
-                <span>Unlimited access to theory training</span>
+                <span>Unbegrenzter Zugang zur Theorievorbereitung</span>
               </li>
               <li class="flex items-start">
                 <span class="star mr-2 mt-1">✓</span>
-                <span>All registration fees included</span>
+                <span>Alle Anmelde- und Verwaltungsgebühren inklusive</span>
               </li>
               <li class="flex items-start">
                 <span class="star mr-2 mt-1">✓</span>
-                <span>2 practical exam appointments</span>
+                <span>2 Termine für die praktische Prüfung</span>
               </li>
               <li class="flex items-start">
                 <span class="star mr-2 mt-1">✓</span>
-                <span>Personal learning plan & follow-up</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Premium -->
-          <div
-            class="bg-slate-950/80 rounded-2xl p-8 card-hover border border-yellow-600/40"
-          >
-            <h3 class="text-2xl font-bold mb-2">Premium Pack</h3>
-            <div
-              class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text gold-gradient mb-6"
-            >
-              1690€
-            </div>
-            <ul class="space-y-3 mb-2 text-sm">
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>40 hours of practical driving</span>
-              </li>
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>Unlimited theory & mock exams</span>
-              </li>
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>All exam & administration fees</span>
-              </li>
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>Up to 3 practical exam appointments</span>
-              </li>
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>Premium coaching & anxiety support</span>
-              </li>
-              <li class="flex items-start">
-                <span class="star mr-2 mt-1">✓</span>
-                <span>Success guarantee*</span>
+                <span>Persönlicher Lernplan &amp; individuelle Betreuung</span>
               </li>
             </ul>
           </div>
@@ -495,12 +407,12 @@
         <div class="text-center mb-14">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
             <span class="text-transparent bg-clip-text gold-gradient"
-              >Our Fleet</span
+              >Unsere Fahrzeuge</span
             >
           </h2>
           <p class="text-gray-300 max-w-2xl mx-auto">
-            Safe, modern and well-maintained vehicles so you can focus on
-            learning — not on the car.
+            Sichere, moderne und gepflegte Fahrzeuge, damit Sie sich ganz auf
+            das Fahrenlernen konzentrieren können – nicht auf das Auto.
           </p>
         </div>
 
@@ -516,7 +428,7 @@
               <div class="h-44 w-full overflow-hidden">
                 <img
                   src="src/images/Volkswagen Golf.png"
-                  alt=""
+                  alt="Volkswagen Golf"
                   class="h-full w-full object-cover"
                 />
               </div>
@@ -525,20 +437,20 @@
                   Volkswagen Golf
                 </h3>
                 <p class="text-gray-300 text-sm mb-4">
-                  2023 model • Manual transmission
+                  Baujahr 2023 • Schaltgetriebe
                 </p>
                 <div class="flex flex-wrap gap-2 text-xs">
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Air conditioning</span
+                    >Klimaanlage</span
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >GPS</span
+                    >Navigation</span
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Rear camera</span
+                    >Rückfahrkamera</span
                   >
                 </div>
               </div>
@@ -551,7 +463,7 @@
               <div class="h-44 w-full overflow-hidden">
                 <img
                   src="src/images/Peugeot 208.jpg"
-                  alt=""
+                  alt="Peugeot 208"
                   class="h-full w-full object-cover"
                 />
               </div>
@@ -560,12 +472,12 @@
                   Peugeot 208
                 </h3>
                 <p class="text-gray-300 text-sm mb-4">
-                  2023 model • Automatic transmission
+                  Baujahr 2023 • Automatik
                 </p>
                 <div class="flex flex-wrap gap-2 text-xs">
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Automatic</span
+                    >Automatik</span
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
@@ -573,7 +485,7 @@
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Parking sensors</span
+                    >Einparkhilfe</span
                   >
                 </div>
               </div>
@@ -586,7 +498,7 @@
               <div class="h-44 w-full overflow-hidden">
                 <img
                   src="src/images/Renault Clio.png"
-                  alt=""
+                  alt="Renault Clio"
                   class="h-full w-full object-cover"
                 />
               </div>
@@ -595,12 +507,12 @@
                   Renault Clio
                 </h3>
                 <p class="text-gray-300 text-sm mb-4">
-                  2024 model • Manual transmission
+                  Baujahr 2024 • Schaltgetriebe
                 </p>
                 <div class="flex flex-wrap gap-2 text-xs">
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Connected</span
+                    >Vernetzte Systeme</span
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
@@ -608,7 +520,7 @@
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Economical</span
+                    >Sparsam</span
                   >
                 </div>
               </div>
@@ -621,7 +533,7 @@
               <div class="h-44 w-full overflow-hidden">
                 <img
                   src="src/images/Tesla Model 3.png"
-                  alt=""
+                  alt="Tesla Model 3"
                   class="h-full w-full object-cover"
                 />
               </div>
@@ -629,11 +541,11 @@
                 <h3 class="text-xl font-bold mb-1 text-yellow-400">
                   Tesla Model 3
                 </h3>
-                <p class="text-gray-300 text-sm mb-4">2024 model • Electric</p>
+                <p class="text-gray-300 text-sm mb-4">Baujahr 2024 • Elektro</p>
                 <div class="flex flex-wrap gap-2 text-xs">
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Electric</span
+                    >Elektrisch</span
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
@@ -641,7 +553,7 @@
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Premium interior</span
+                    >Premium-Innenraum</span
                   >
                 </div>
               </div>
@@ -668,16 +580,17 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="py-20 px-6 bg-slate-900/70">
+    <section id="testimonials" class="hidden py-20 px-6 bg-slate-900/70 todo">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-14">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
             <span class="text-transparent bg-clip-text gold-gradient"
-              >What Our Students Say</span
+              >Was unsere Fahrschüler sagen</span
             >
           </h2>
           <p class="text-gray-300 max-w-2xl mx-auto">
-            Real feedback from drivers who started exactly where you are now.
+            Echte Rückmeldungen von Fahrerinnen und Fahrern, die genau da
+            angefangen haben, wo Sie jetzt stehen.
           </p>
         </div>
 
@@ -690,8 +603,9 @@
               <span class="star text-lg">★★★★★</span>
             </div>
             <p class="text-gray-200 mb-6 text-sm italic">
-              “Amazing driving school! I passed my exam the first time. The
-              instructors are calm, clear and very supportive.”
+              „Großartige Fahrschule! Ich habe die Prüfung direkt beim ersten
+              Mal bestanden. Die Fahrlehrer sind ruhig, klar und sehr
+              unterstützend.“
             </p>
             <div class="flex items-center">
               <div
@@ -701,7 +615,9 @@
               </div>
               <div>
                 <div class="font-semibold text-sm">Marie L.</div>
-                <div class="text-xs text-gray-400">Standard License • 2024</div>
+                <div class="text-xs text-gray-400">
+                  Führerschein Klasse B • 2024
+                </div>
               </div>
             </div>
           </div>
@@ -714,9 +630,9 @@
               <span class="star text-lg">★★★★★</span>
             </div>
             <p class="text-gray-200 mb-6 text-sm italic">
-              “The intensive course was perfect for my busy schedule. We planned
-              all sessions around my work and I felt ready for the exam very
-              quickly.”
+              „Der Intensivkurs war perfekt für meinen vollen Terminplan. Wir
+              haben alle Stunden rund um meine Arbeit gelegt und ich war sehr
+              schnell prüfungsbereit.“
             </p>
             <div class="flex items-center">
               <div
@@ -726,7 +642,7 @@
               </div>
               <div>
                 <div class="font-semibold text-sm">Ahmed K.</div>
-                <div class="text-xs text-gray-400">Intensive Course • 2024</div>
+                <div class="text-xs text-gray-400">Intensivkurs • 2024</div>
               </div>
             </div>
           </div>
@@ -739,9 +655,9 @@
               <span class="star text-lg">★★★★★</span>
             </div>
             <p class="text-gray-200 mb-6 text-sm italic">
-              “Best driving school in the area. I was very anxious at the
-              beginning, but my instructor stayed patient and helped me gain
-              real confidence.”
+              „Beste Fahrschule in der Umgebung. Ich war am Anfang sehr nervös,
+              aber mein Fahrlehrer war immer geduldig und hat mir wirklich
+              Sicherheit gegeben.“
             </p>
             <div class="flex items-center">
               <div
@@ -751,7 +667,9 @@
               </div>
               <div>
                 <div class="font-semibold text-sm">Laura S.</div>
-                <div class="text-xs text-gray-400">Refresh Lessons • 2023</div>
+                <div class="text-xs text-gray-400">
+                  Auffrischungsstunden • 2023
+                </div>
               </div>
             </div>
           </div>
@@ -762,40 +680,40 @@
     <!-- Contact -->
     <section id="contact" class="py-20 px-6">
       <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-        <!-- Contact form -->
-        <div>
+        <!-- Contact form (hidden) -->
+        <div class="hidden todo">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
             <span class="text-transparent bg-clip-text gold-gradient"
-              >Book Your First Lesson</span
+              >Buchen Sie Ihre erste Fahrstunde</span
             >
           </h2>
           <p class="text-gray-300 mb-6">
-            Tell us a bit about you and your availability. We will contact you
-            to confirm your schedule and answer all your questions.
+            Erzählen Sie uns kurz etwas über sich und Ihre Verfügbarkeit. Wir
+            melden uns, um Termine zu bestätigen und alle Fragen zu beantworten.
           </p>
 
           <form
             class="space-y-4 bg-slate-900/70 p-6 rounded-2xl border border-slate-700 card-hover"
           >
             <div>
-              <label class="block text-sm mb-1">Full name</label>
+              <label class="block text-sm mb-1">Vollständiger Name</label>
               <input
                 type="text"
                 class="w-full px-3 py-2 rounded-lg bg-slate-950/80 border border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                placeholder="Your name"
+                placeholder="Ihr Name"
               />
             </div>
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-sm mb-1">Email</label>
+                <label class="block text-sm mb-1">E-Mail</label>
                 <input
                   type="email"
                   class="w-full px-3 py-2 rounded-lg bg-slate-950/80 border border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                  placeholder="you@example.com"
+                  placeholder="sie@beispiel.de"
                 />
               </div>
               <div>
-                <label class="block text-sm mb-1">Phone</label>
+                <label class="block text-sm mb-1">Telefon</label>
                 <input
                   type="tel"
                   class="w-full px-3 py-2 rounded-lg bg-slate-950/80 border border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
@@ -804,85 +722,95 @@
               </div>
             </div>
             <div>
-              <label class="block text-sm mb-1">Preferred program</label>
+              <label class="block text-sm mb-1">Gewünschte Ausbildung</label>
               <select
                 class="w-full px-3 py-2 rounded-lg bg-slate-950/80 border border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
               >
-                <option>Standard License (B)</option>
-                <option>Intensive Course</option>
-                <option>Refresh / Advanced</option>
-                <option>Just have a question</option>
+                <option>Führerscheinklasse B</option>
+                <option>Führerscheinklasse BE</option>
               </select>
             </div>
             <div>
-              <label class="block text-sm mb-1">Message</label>
+              <label class="block text-sm mb-1">Nachricht</label>
               <textarea
                 rows="4"
                 class="w-full px-3 py-2 rounded-lg bg-slate-950/80 border border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                placeholder="Tell us your level, availability, and goals..."
+                placeholder="Schreiben Sie uns Ihr Fahrniveau, Ihre Ziele und Ihre Wunschtermine..."
               ></textarea>
             </div>
             <button
               type="submit"
               class="w-full gold-gradient text-slate-900 py-3 rounded-full font-semibold hover:scale-105 transition shine-effect"
             >
-              Send request
+              Anfrage senden
             </button>
             <p class="text-xs text-gray-400 mt-2">
-              By sending this form, you agree to be contacted by King Fahrschule
-              regarding driving lessons and pricing.
+              Mit dem Absenden des Formulars erklären Sie sich damit
+              einverstanden, von der King Fahrschule bezüglich Fahrstunden und
+              Preisen kontaktiert zu werden.
             </p>
           </form>
         </div>
 
-        <!-- Info / map placeholder -->
+        <!-- Info / map -->
         <div class="space-y-6">
           <div class="glass rounded-2xl p-6 border border-slate-700">
-            <h3 class="text-xl font-semibold mb-3">Contact & Opening Hours</h3>
+            <div>
+              <h2>
+                <span
+                  class="text-transparent bg-clip-text gold-gradient text-3xl md:text-4xl font-bold"
+                  >Buchen Sie Ihre erste Fahrstunde</span
+                >
+              </h2>
+              <p class="text-gray-300 mb-6">
+                Erzählen Sie uns kurz etwas über sich und Ihre Verfügbarkeit.
+                Wir melden uns, um Termine zu bestätigen und alle Fragen zu
+                beantworten.
+              </p>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Kontakt &amp; Öffnungszeiten
+            </h3>
             <div class="space-y-2 text-sm text-gray-200">
-              <p><strong>Phone:</strong> +49 000 000 000</p>
-              <p><strong>Email:</strong> info@king-fahrschule.de</p>
-              <p><strong>Address:</strong> Main Street 12, 12345 Your City</p>
+              <p><strong>Telefon: </strong> +49 174 9727442</p>
+              <p><strong>E-Mail: </strong> info@king-fahrschule.de</p>
+              <p>
+                <strong>Adresse: </strong>Bahnhof 8, 56564 Neuwied, Deutschland
+              </p>
             </div>
             <div class="grid grid-cols-2 gap-4 mt-4 text-xs text-gray-200">
               <div>
                 <p class="font-semibold text-yellow-400 mb-1">
-                  Monday – Friday
+                  Montag und Freitag
                 </p>
-                <p>09:00 – 12:00</p>
-                <p>14:00 – 19:00</p>
-              </div>
-              <div>
-                <p class="font-semibold text-yellow-400 mb-1">Saturday</p>
-                <p>10:00 – 14:00</p>
-                <p class="mt-2 text-red-300">Sunday closed</p>
+                <p>16:00 – 18:00 Uhr</p>
               </div>
             </div>
           </div>
+        </div>
+        <div
+          class="glass rounded-2xl p-6 border border-slate-700 flex flex-col justify-between h-fit"
+        >
+          <h3 class="text-xl font-semibold mb-3">So finden Sie uns</h3>
+          <p class="text-sm text-gray-300 mb-4">
+            Unsere Fahrschule ist gut mit öffentlichen Verkehrsmitteln
+            erreichbar – Bus- und Bahn­haltestellen befinden sich nur wenige
+            Gehminuten entfernt.
+          </p>
 
           <div
-            class="glass rounded-2xl p-6 border border-slate-700 flex flex-col justify-between h-fit"
+            class="w-full h-48 rounded-xl overflow-hidden border border-slate-700"
           >
-            <h3 class="text-xl font-semibold mb-3">Where to find us</h3>
-            <p class="text-sm text-gray-300 mb-4">
-              Our driving school is easily accessible by public transport, with
-              bus and metro stops just a few minutes away.
-            </p>
-
-            <div
-              class="w-full h-48 rounded-xl overflow-hidden border border-slate-700"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.4470691728907!2d7.391659477505064!3d50.39550527158185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47be608583d8de97%3A0x871ddcf130ad5c07!2sAm%20bhf%208%2C%2056637%20Plaidt%2C%20Allemagne!5e0!3m2!1sfr!2sfr!4v1763393766857!5m2!1sfr!2sfr"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
             >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.4470691728907!2d7.391659477505064!3d50.39550527158185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47be608583d8de97%3A0x871ddcf130ad5c07!2sAm%20bhf%208%2C%2056637%20Plaidt%2C%20Allemagne!5e0!3m2!1sfr!2sfr!4v1763393766857!5m2!1sfr!2sfr"
-                width="100%"
-                height="100%"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              >
-              </iframe>
-            </div>
+            </iframe>
           </div>
         </div>
       </div>
@@ -893,8 +821,10 @@
       <div
         class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400"
       >
-        <p>© <span id="year"></span> King Fahrschule. All rights reserved.</p>
-        <p>Designed with passion for safe driving.</p>
+        <p>
+          © <span id="year"></span> King Fahrschule. Alle Rechte vorbehalten.
+        </p>
+        <p>Mit Leidenschaft für sicheres Fahren gestaltet.</p>
       </div>
     </footer>
 
