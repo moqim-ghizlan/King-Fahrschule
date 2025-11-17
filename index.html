@@ -196,61 +196,64 @@
     </section>
     <!-- Full Width Image Slider -->
     <section class="w-full py-8 px-8">
-      <div class="relative overflow-hidden w-full">
-        <div
-          id="heroSlider"
-          class="flex transition-transform duration-700 ease-out"
-        >
-          <div class="slide w-full shrink-0">
-            <img
-              src="./src/images/slider-1.jpg"
-              class="w-full h-[400px] object-cover rounded-2xl"
-            />
-          </div>
+        <div class="max-w-6xl mx-auto">
 
-          <div class="slide w-full shrink-0">
-            <img
-              src="./src/images/slider-2.jpg"
-              class="w-full h-[400px] object-cover rounded-2xl"
-            />
-          </div>
+            <div class="relative overflow-hidden w-full">
+              <div
+                id="heroSlider"
+                class="flex transition-transform duration-700 ease-out"
+              >
+                <div class="slide w-full shrink-0">
+                  <img
+                    src="./src/images/slider-1.jpg"
+                    class="w-full h-[400px] object-cover rounded-2xl"
+                  />
+                </div>
 
-          <div class="slide w-full shrink-0">
-            <img
-              src="./src/images/slider-3.jpg"
-              class="w-full h-[400px] object-cover rounded-2xl"
-            />
-          </div>
+                <div class="slide w-full shrink-0">
+                  <img
+                    src="./src/images/slider-2.jpg"
+                    class="w-full h-[400px] object-cover rounded-2xl"
+                  />
+                </div>
 
-          <div class="slide w-full shrink-0">
-            <img
-              src="./src/images/slider-4.png"
-              class="w-full h-[400px] object-cover rounded-2xl"
-            />
-          </div>
+                <div class="slide w-full shrink-0">
+                  <img
+                    src="./src/images/slider-3.jpg"
+                    class="w-full h-[400px] object-cover rounded-2xl"
+                  />
+                </div>
 
-          <div class="slide w-full shrink-0">
-            <img
-              src="./src/images/slider-3.jpg"
-              class="w-full h-[400px] object-cover rounded-2xl"
-            />
-          </div>
+                <div class="slide w-full shrink-0">
+                  <img
+                    src="./src/images/slider-4.png"
+                    class="w-full h-[400px] object-cover rounded-2xl"
+                  />
+                </div>
+
+                <div class="slide w-full shrink-0">
+                  <img
+                    src="./src/images/slider-3.jpg"
+                    class="w-full h-[400px] object-cover rounded-2xl"
+                  />
+                </div>
+              </div>
+
+              <!-- Arrows -->
+              <button
+                onclick="prevSlide()"
+                class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
+              >
+                ❮
+              </button>
+              <button
+                onclick="nextSlide()"
+                class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
+              >
+                ❯
+              </button>
+            </div>
         </div>
-
-        <!-- Arrows -->
-        <button
-          onclick="prevSlide()"
-          class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
-        >
-          ❮
-        </button>
-        <button
-          onclick="nextSlide()"
-          class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
-        >
-          ❯
-        </button>
-      </div>
     </section>
     <!-- Training -->
     <section id="training" class="py-20 px-6">
