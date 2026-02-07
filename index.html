@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
@@ -250,13 +250,13 @@
           <!-- Arrows -->
           <button
             onclick="prevSlide()"
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
+            class="slider-arrow absolute left-4 top-1/2 -translate-y-1/2"
           >
             ❮
           </button>
           <button
             onclick="nextSlide()"
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 px-3 py-1 rounded-full text-white text-2xl hover:bg-black/60 transition"
+            class="slider-arrow absolute right-4 top-1/2 -translate-y-1/2"
           >
             ❯
           </button>
@@ -559,16 +559,10 @@
 
           <!-- Slider controls -->
           <div class="flex justify-center gap-4 mt-6">
-            <button
-              onclick="scrollSlider('left')"
-              class="gold-gradient text-slate-900 w-11 h-11 flex items-center justify-center m-0 p-0 text-3xl rounded-full font-bold hover:scale-110 transition"
-            >
+            <button onclick="scrollSlider('left')" class="slider-arrow">
               ←
             </button>
-            <button
-              onclick="scrollSlider('right')"
-              class="gold-gradient text-slate-900 w-11 h-11 flex items-center justify-center m-0 p-0 text-3xl rounded-full font-bold hover:scale-110 transition"
-            >
+            <button onclick="scrollSlider('right')" class="slider-arrow">
               →
             </button>
           </div>

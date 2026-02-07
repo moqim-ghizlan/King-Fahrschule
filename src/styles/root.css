@@ -1,3 +1,15 @@
 html {
   scroll-behavior: smooth;
 }
+
+:root {
+  --brand-black: #050607;
+  --brand-charcoal: #0b0f14;
+  --brand-charcoal-soft: #111827;
+  --brand-silver-100: #f3f4f6;
+  --brand-silver-200: #e5e7eb;
+  --brand-silver-400: #9ca3af;
+  --brand-red-300: #ef4444;
+  --brand-red-500: #d11c24;
+  --brand-red-700: #9f141b;
+}
