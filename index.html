@@ -16,6 +16,26 @@
     <link rel="stylesheet" href="src/styles/style.css" />
     <style>
       /* === Keyframes === */
+      @keyframes modalIn {
+        from { opacity: 0; transform: scale(0.85) translateY(24px); }
+        to   { opacity: 1; transform: scale(1)    translateY(0);    }
+      }
+      @keyframes modalOut {
+        from { opacity: 1; transform: scale(1)    translateY(0);    }
+        to   { opacity: 0; transform: scale(0.85) translateY(24px); }
+      }
+      @keyframes backdropIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+      @keyframes backdropOut {
+        from { opacity: 1; }
+        to   { opacity: 0; }
+      }
+      .modal-open  { animation: backdropIn  0.3s ease forwards; }
+      .modal-close { animation: backdropOut 0.3s ease forwards; }
+      .modal-box-open  { animation: modalIn  0.35s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+      .modal-box-close { animation: modalOut 0.25s ease-in forwards; }
     </style>
   </head>
 
@@ -30,7 +50,7 @@
         <!-- Logo -->
         <a href="#home" class="flex items-center space-x-3">
           <img
-            src="src/images/new_logo_png.png"
+            src="src/images/logo_png.png"
             class="w-[175px] h-20 transition-transform duration-300 hover:scale-105"
             alt="King Fahrschule Logo"
           />
@@ -40,6 +60,9 @@
         <nav class="hidden md:flex space-x-8 text-sm font-medium">
           <a href="#training" class="nav-link">Ausbildung</a>
           <a href="#pricing" class="nav-link">Preise</a>
+          <a href="#angebot" class="nav-link text-red-400 hover:text-red-300"
+            >Angebot 🔥</a
+          >
           <a href="#fleet" class="nav-link">Fahrzeuge</a>
           <a href="#testimonials" class="nav-link">Erfahrungsberichte</a>
           <a href="#contact" class="nav-link">Kontakt</a>
@@ -61,9 +84,29 @@
       >
         <a href="#training" class="mobile-link">Ausbildung</a>
         <a href="#pricing" class="mobile-link">Preise</a>
+        <a href="#angebot" class="mobile-link">Angebot</a>
         <a href="#fleet" class="mobile-link">Fahrzeuge</a>
         <a href="#testimonials" class="mobile-link">Erfahrungsberichte</a>
         <a href="#contact" class="mobile-link">Kontakt</a>
+      </div>
+
+      <!-- Announcement Banner -->
+      <div
+        id="announcementBanner"
+        class="bg-gradient-to-r from-red-700 via-red-600 to-yellow-600 text-white text-center py-2 px-10 text-xs sm:text-sm font-semibold relative"
+      >
+        🎉 Neue Eröffnung im März! Neuanmeldung nur
+        <strong>200 €</strong> &nbsp;|&nbsp; Fahrschulwechsler nur
+        <strong>50 €</strong> &nbsp;|&nbsp; Gültig vom 3. bis 7. März
+        <a href="#angebot" class="underline ml-2">Mehr erfahren →</a>
+        <button
+          onclick="
+            document.getElementById('announcementBanner').style.display = 'none'
+          "
+          class="absolute right-3 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-xl leading-none"
+        >
+          ×
+        </button>
       </div>
     </header>
 
@@ -81,7 +124,7 @@
               class="absolute -inset-0.5 bg-gradient-to-tr from-yellow-500/60 via-yellow-300/40 to-yellow-600/60 opacity-40 blur-xl -z-10"
             ></div>
             <img
-              src="src/images/new_logo_png.png"
+              src="src/images/logo_png.png"
               alt="King Fahrschule Logo"
               class="w-full h-auto rounded-3xl mx-auto drop-shadow-2xl animate-pulse-slow"
             />
@@ -398,6 +441,100 @@
       </div>
     </section>
 
+    <!-- Angebot / Promo Section -->
+    <section
+      id="angebot"
+      class="py-20 px-6 bg-gradient-to-b from-red-950/60 to-slate-900/80 border-y border-red-700/40"
+    >
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span
+            class="inline-block bg-red-600 text-white text-xs font-bold tracking-widest uppercase px-4 py-1 rounded-full mb-4"
+            >Sonderangebot</span
+          >
+          <h2 class="text-4xl md:text-5xl font-bold mb-3">
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-yellow-400"
+              >Neue Eröffnung im März!</span
+            >
+          </h2>
+          <p class="text-gray-300 max-w-xl mx-auto text-sm">
+            Gültig vom <strong class="text-white">3. bis 7. März</strong> – Nur
+            für kurze Zeit. Jetzt anmelden und sparen!
+          </p>
+        </div>
+
+        <!-- Promo Cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div
+            class="bg-slate-900/80 border border-yellow-600/40 rounded-2xl p-6 text-center card-hover"
+          >
+            <div class="text-4xl font-extrabold text-yellow-400 mb-1">65 €</div>
+            <div class="text-sm text-gray-300">Übungsstunde</div>
+          </div>
+          <div
+            class="bg-slate-900/80 border border-yellow-600/40 rounded-2xl p-6 text-center card-hover"
+          >
+            <div class="text-4xl font-extrabold text-yellow-400 mb-1">
+              220 €
+            </div>
+            <div class="text-sm text-gray-300">Prüfungsfahrt</div>
+          </div>
+          <div
+            class="bg-slate-900/80 border border-yellow-600/40 rounded-2xl p-6 text-center card-hover"
+          >
+            <div class="text-4xl font-extrabold text-yellow-400 mb-1">50 €</div>
+            <div class="text-sm text-gray-300">Theorie Prüfung</div>
+          </div>
+          <div
+            class="bg-slate-900/80 border border-yellow-600/40 rounded-2xl p-6 text-center card-hover"
+          >
+            <div class="text-4xl font-extrabold text-yellow-400 mb-1">50 €</div>
+            <div class="text-sm text-gray-300">Schutzgebühr</div>
+          </div>
+        </div>
+
+        <!-- Two big offer boxes -->
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div
+            class="bg-gradient-to-br from-red-800/40 to-slate-900/80 border-2 border-red-500 rounded-2xl p-8 text-center card-hover"
+          >
+            <div
+              class="text-xs font-bold uppercase tracking-widest text-red-400 mb-2"
+            >
+              Fahrschulwechsler / Umschreiber
+            </div>
+            <div class="text-6xl font-extrabold text-white mb-1">
+              50 <span class="text-3xl">€</span>
+            </div>
+            <p class="text-gray-300 text-sm mt-2 text-balance">
+              Wechseln Sie jetzt zur King Fahrschule – zum Aktionspreis!
+            </p>
+          </div>
+          <div
+            class="bg-gradient-to-br from-yellow-800/30 to-slate-900/80 border-2 border-yellow-500 rounded-2xl p-8 text-center card-hover relative"
+          >
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 gold-gradient text-slate-900 px-5 py-1 rounded-full text-xs font-bold tracking-wide"
+            >
+              EMPFEHLUNG
+            </div>
+            <div
+              class="text-xs font-bold uppercase tracking-widest text-yellow-400 mb-2"
+            >
+              Neuanmeldung Grundgebühr
+            </div>
+            <div class="text-6xl font-extrabold text-white mb-1">
+              200 <span class="text-3xl">€</span>
+            </div>
+            <p class="text-gray-300 text-sm mt-2">
+              Starten Sie Ihren Führerschein jetzt – günstiger geht's nicht!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Fleet Slider -->
     <section id="fleet" class="py-20 px-6">
       <div class="max-w-6xl mx-auto">
@@ -420,21 +557,22 @@
           >
             <!-- Car 1 -->
             <div
-              class="min-w-[320px] md:min-w-[360px] bg-slate-900/80 rounded-2xl overflow-hidden card-hover border border-yellow-600/40"
+              class="min-w-[320px] md:min-w-[360px] bg-slate-900/80 rounded-2xl card-hover border border-yellow-600/40"
             >
-              <div class="h-44 w-full overflow-hidden">
+              <div class="h-60 w-full overflow-hidden rounded-t-2xl">
                 <img
-                  src="src/images/Volkswagen Golf.png"
-                  alt="Volkswagen Golf"
-                  class="h-full w-full object-cover"
+                  id="car1AutoImage"
+                  src="src/images/cupra_formentor_rs.png"
+                  alt="Cupra Formentor"
+                  class="h-full w-full object-cover object-bottom transition-opacity duration-700 ease-in-out opacity-100"
                 />
               </div>
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-1 text-yellow-400">
-                  Volkswagen Golf
+                  Cupra Formentor
                 </h3>
                 <p class="text-gray-300 text-sm mb-4">
-                  Baujahr 2023 • Schaltgetriebe
+                  Baujahr 2024 • Schaltgetriebe
                 </p>
                 <div class="flex flex-wrap gap-2 text-xs">
                   <span
@@ -453,104 +591,36 @@
               </div>
             </div>
 
-            <!-- Car 2 -->
+
             <div
-              class="min-w-[320px] md:min-w-[360px] bg-slate-900/80 rounded-2xl overflow-hidden card-hover border border-yellow-600/40"
+              class="min-w-[320px] md:min-w-[360px] bg-slate-900/80 rounded-2xl card-hover border border-yellow-600/40"
             >
-              <div class="h-44 w-full overflow-hidden">
+              <div class="h-60 w-full overflow-hidden rounded-t-2xl">
                 <img
-                  src="src/images/Peugeot 208.jpg"
-                  alt="Peugeot 208"
-                  class="h-full w-full object-cover"
+                  src="src/images/cupra_formentor_2.png"
+                  alt="Cupra Formentor"
+                  class="h-full w-full object-cover object-center"
                 />
               </div>
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-1 text-yellow-400">
-                  Peugeot 208
+                  Cupra Formentor
                 </h3>
                 <p class="text-gray-300 text-sm mb-4">
-                  Baujahr 2023 • Automatik
+                  Baujahr 2024 • Automatisch Getriebe
                 </p>
                 <div class="flex flex-wrap gap-2 text-xs">
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Automatik</span
+                    >Klimaanlage</span
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Touchscreen</span
+                    >Navigation</span
                   >
                   <span
                     class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Einparkhilfe</span
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Car 3 -->
-            <div
-              class="min-w-[320px] md:min-w-[360px] bg-slate-900/80 rounded-2xl overflow-hidden card-hover border border-yellow-600/40"
-            >
-              <div class="h-44 w-full overflow-hidden">
-                <img
-                  src="src/images/Renault Clio.png"
-                  alt="Renault Clio"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold mb-1 text-yellow-400">
-                  Renault Clio
-                </h3>
-                <p class="text-gray-300 text-sm mb-4">
-                  Baujahr 2024 • Schaltgetriebe
-                </p>
-                <div class="flex flex-wrap gap-2 text-xs">
-                  <span
-                    class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Vernetzte Systeme</span
-                  >
-                  <span
-                    class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Safety+</span
-                  >
-                  <span
-                    class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Sparsam</span
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Car 4 -->
-            <div
-              class="min-w-[320px] md:min-w-[360px] bg-slate-900/80 rounded-2xl overflow-hidden card-hover border border-yellow-600/40"
-            >
-              <div class="h-44 w-full overflow-hidden">
-                <img
-                  src="src/images/Tesla Model 3.png"
-                  alt="Tesla Model 3"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold mb-1 text-yellow-400">
-                  Tesla Model 3
-                </h3>
-                <p class="text-gray-300 text-sm mb-4">Baujahr 2024 • Elektro</p>
-                <div class="flex flex-wrap gap-2 text-xs">
-                  <span
-                    class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Elektrisch</span
-                  >
-                  <span
-                    class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Autopilot</span
-                  >
-                  <span
-                    class="bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full"
-                    >Premium-Innenraum</span
+                    >Rückfahrkamera</span
                   >
                 </div>
               </div>
@@ -558,14 +628,14 @@
           </div>
 
           <!-- Slider controls -->
-          <div class="flex justify-center gap-4 mt-6">
+          <!-- <div class="flex justify-center gap-4 mt-6">
             <button onclick="scrollSlider('left')" class="slider-arrow">
               ←
             </button>
             <button onclick="scrollSlider('right')" class="slider-arrow">
               →
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -766,7 +836,8 @@
               <p><strong>Telefon: </strong> +49 174 9727442</p>
               <p><strong>E-Mail: </strong> kingfahrschule@gmail.com</p>
               <p>
-                <strong>Adresse: </strong>Bahnhofstraße 8, 56564 Neuwied, Rheinland-Pfalz Deutschland
+                <strong>Adresse: </strong>Bahnhofstraße 8, 56564 Neuwied,
+                Rheinland-Pfalz Deutschland
               </p>
             </div>
             <div class="grid grid-cols-2 gap-4 mt-4 text-xs text-gray-200">
@@ -793,15 +864,14 @@
             class="w-full h-48 rounded-xl overflow-hidden border border-slate-700"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.4470691728907!2d7.391659477505064!3d50.39550527158185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47be608583d8de97%3A0x871ddcf130ad5c07!2sAm%20bhf%208%2C%2056637%20Plaidt%2C%20Allemagne!5e0!3m2!1sfr!2sfr!4v1763393766857!5m2!1sfr!2sfr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.6535353050112!2d7.4666573!3d50.42892650000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47be613f0423601d%3A0xc35cc2dffc3b03ff!2sKing%20Fahrschule!5e0!3m2!1sfr!2sfr!4v1772134811443!5m2!1sfr!2sfr"
               width="100%"
               height="100%"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
+            ></iframe>
           </div>
         </div>
       </div>
@@ -818,6 +888,67 @@
         <p>Mit Leidenschaft für sicheres Fahren gestaltet.</p>
       </div>
     </footer>
+
+    <!-- Promo Modal -->
+    <div
+      id="promoModal"
+      style="display: none"
+      class="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
+    >
+      <div
+        id="promoModalBox"
+        class="relative bg-gradient-to-b from-slate-900 to-slate-950 border-2 border-red-600 rounded-3xl max-w-md w-full p-8 text-center shadow-2xl"
+      >
+        <!-- Close -->
+        <button
+          onclick="closePromoModal()"
+          class="absolute top-3 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+        >
+          ×
+        </button>
+
+        <!-- Badge -->
+        <span
+          class="inline-block bg-red-600 text-white text-xs font-bold tracking-widest uppercase px-4 py-1 rounded-full mb-5"
+          >🎉 Sonderangebot März</span
+        >
+
+        <h2 class="text-3xl font-extrabold mb-1">
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-yellow-400"
+            >Neue Eröffnung!</span
+          >
+        </h2>
+        <p class="text-gray-300 text-sm mb-6">
+          Gültig vom <strong class="text-white">3. bis 7. März</strong>
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="bg-red-800/30 border border-red-500 rounded-xl p-4">
+            <div class="text-3xl font-extrabold text-white">50 €</div>
+            <div class="text-xs text-gray-300 mt-1">Fahrschulwechsler</div>
+          </div>
+          <div class="bg-yellow-800/20 border border-yellow-500 rounded-xl p-4">
+            <div class="text-3xl font-extrabold text-white">200 €</div>
+            <div class="text-xs text-gray-300 mt-1">Neuanmeldung</div>
+          </div>
+        </div>
+
+        <a
+          href="#angebot"
+          onclick="closePromoModal()"
+          class="block w-full gold-gradient text-slate-900 py-3 rounded-full font-bold text-sm hover:scale-105 transition shine-effect"
+        >
+          Jetzt Angebot ansehen →
+        </a>
+        <button
+          onclick="closePromoModal()"
+          class="mt-3 text-xs text-gray-500 hover:text-gray-300 transition"
+        >
+          Schließen
+        </button>
+      </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="src/scripts/script.js"></script>
