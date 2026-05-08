@@ -141,3 +141,29 @@ function openPromoModal() {
         });
     }
 })();
+// -- Cookie Banner ------------------------------------------------------------
+(function () {
+    const banner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('acceptCookies');
+    const declineBtn = document.getElementById('declineCookies');
+
+    if (!banner || !acceptBtn || !declineBtn) return;
+
+    const cookieConsent = localStorage.getItem('cookieConsent');
+
+    if (!cookieConsent) {
+        setTimeout(() => {
+            banner.classList.remove('translate-y-full');
+        }, 2000);
+    }
+
+    acceptBtn.onclick = () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        banner.classList.add('translate-y-full');
+    };
+
+    declineBtn.onclick = () => {
+        localStorage.setItem('cookieConsent', 'declined');
+        banner.classList.add('translate-y-full');
+    };
+})();
