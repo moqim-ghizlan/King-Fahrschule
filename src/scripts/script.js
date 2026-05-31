@@ -67,8 +67,8 @@ setInterval(nextSlide, 4000);
 // ── Car 1 auto image slider ──────────────────────────────────────────────────
 (function () {
     const car1Images = [
-        "src/images/cupra_formentor_rs.png",
-        "src/images/cupra_formentor_ls.png",
+        "src/images/cars/WhatsApp Image 2026-05-25 at 09.21.50 (4).jpeg",
+        "src/images/cars/WhatsApp Image 2026-05-25 at 09.21.50.jpeg",
     ];
     const car1ImageElement = document.getElementById("car1AutoImage");
     if (!car1ImageElement) return;
@@ -91,6 +91,41 @@ setInterval(nextSlide, 4000);
             isAnimating = false;
         }, 350);
     }, 5000);
+})();
+
+// ── Pricing tabs ─────────────────────────────────────────────────────────────
+(function () {
+    const buttons = document.querySelectorAll("[data-pricing-tab]");
+    const panelB = document.getElementById("pricingPanelB");
+    const panelBE = document.getElementById("pricingPanelBE");
+
+    if (!buttons.length || !panelB || !panelBE) return;
+
+    function setTab(tabName) {
+        const isB = tabName === "klasse-b";
+
+        panelB.classList.toggle("hidden", !isB);
+        panelBE.classList.toggle("hidden", isB);
+
+        buttons.forEach((button) => {
+            const isActive = button.dataset.pricingTab === tabName;
+            button.classList.toggle("border-yellow-500", isActive);
+            button.classList.toggle("bg-yellow-600/20", isActive);
+            button.classList.toggle("text-yellow-400", isActive);
+
+            button.classList.toggle("border-slate-600", !isActive);
+            button.classList.toggle("bg-slate-900/70", !isActive);
+            button.classList.toggle("text-gray-300", !isActive);
+        });
+    }
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            setTab(button.dataset.pricingTab);
+        });
+    });
+
+    setTab("klasse-b");
 })();
 
 // ── Promo modal ──────────────────────────────────────────────────────────────
