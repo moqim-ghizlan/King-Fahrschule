@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum – King Fahrschule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="src/images/logo.jpeg" sizes="32x32" />
+    <link rel="stylesheet" href="src/styles/keyframes.css" />
+    <link rel="stylesheet" href="src/styles/root.css" />
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
+
+  <body class="gradient-bg text-white min-h-screen flex flex-col">
+    <!-- HEADER -->
+    <header class="bg-slate-950/80 backdrop-blur-lg border-b border-yellow-600/20">
+      <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        <a href="index.html" class="flex items-center space-x-3">
+          <img src="src/images/logo.png" class="w-[100px] h-10 transition-transform duration-300 hover:scale-105" alt="King Fahrschule Logo" />
+        </a>
+        <a href="index.html" class="gold-gradient text-slate-900 px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition shadow-lg">Zurück zur Startseite</a>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="flex-grow max-w-4xl mx-auto px-6 py-16">
+      <div class="glass rounded-3xl p-8 md:p-12 border border-slate-700 shadow-2xl animate-fade-up">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-8 text-transparent bg-clip-text gold-gradient">Impressum</h1>
+
+        <div class="space-y-8 text-slate-300">
+          <section>
+            <h2 class="text-xl font-bold text-yellow-400 mb-2">Angaben gemäß § 5 TMG</h2>
+            <p>King Fahrschule</p>
+            <p>Bahnhofstraße 8</p>
+            <p>56564 Neuwied</p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-yellow-400 mb-2">Vertreten durch</h2>
+            <p>Alkanjo Ahmad </p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-yellow-400 mb-2">Registereintrag</h2>
+            <p>Wirtschafts-Identifikationsnummer: 3265506416</p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold text-yellow-400 mb-2">Kontakt</h2>
+            <p>Telefon: +49 174 9727442</p>
+            <p>E-Mail: kingfahrschule@gmail.com</p>
+          </section>
+
+
+
+          <hr class="border-slate-700 my-8">
+
+          <section class="text-sm">
+            <h3 class="font-bold mb-2">Haftung für Inhalte</h3>
+            <p class="mb-4">Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+
+            <h3 class="font-bold mb-2">Haftung für Links</h3>
+            <p class="mb-4">Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-10 bg-slate-950/95 border-t border-slate-800 mt-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-gray-400">
+          <div class="flex flex-col items-center sm:items-start gap-2">
+            <p>© <span id="year"></span> King Fahrschule. Alle Rechte vorbehalten.</p>
+            <p>Mit Leidenschaft für sicheres Fahren gestaltet.</p>
+          </div>
+          <div class="flex items-center gap-6 font-medium">
+            <a href="index.html" class="hover:text-yellow-400 transition underline-offset-4 hover:underline">Startseite</a>
+            <a href="impressum.html" class="hover:text-yellow-400 transition underline-offset-4 hover:underline">Impressum</a>
+            <a href="datenschutz.html" class="hover:text-yellow-400 transition underline-offset-4 hover:underline">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="fixed bottom-0 left-0 w-full z-[1000] p-4 translate-y-full transition-transform duration-500 ease-out">
+      <div class="max-w-4xl mx-auto glass border border-yellow-600/30 rounded-2xl p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-gray-200">
+          <p>Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und den Verkehr auf unserer Website zu analysieren. Weitere Informationen finden Sie in unserer <a href="datenschutz.html" class="underline text-yellow-400">Datenschutzerklärung</a>.</p>
+        </div>
+        <div class="flex gap-3 shrink-0">
+          <button id="acceptCookies" class="gold-gradient text-slate-900 px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition shadow-lg">Akzeptieren</button>
+          <button id="declineCookies" class="border border-slate-600 text-gray-400 px-6 py-2 rounded-full font-bold text-sm hover:bg-slate-800 transition">Ablehnen</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/scripts/script.js"></script>
+  </body>
+</html>

@@ -1,110 +1,463 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datenschutzerklärung – King Fahrschule</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="src/images/logo.jpeg" sizes="32x32" />
-    <link rel="stylesheet" href="src/styles/keyframes.css" />
-    <link rel="stylesheet" href="src/styles/root.css" />
-    <link rel="stylesheet" href="src/styles/style.css" />
-  </head>
 
-  <body class="gradient-bg text-white min-h-screen flex flex-col">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung – King Fahrschule Neuwied</title>
+    <meta name="description" content="Datenschutzerklärung der King Fahrschule in Neuwied. Informationen zur Verarbeitung Ihrer personenbezogenen Daten.">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" type="image/png" href="./src/images/logo_cercle.jpeg" sizes="32x32">
+    <meta name="theme-color" content="#0B1320">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0B1320;
+            color: #FFFFFF;
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        ul {
+            list-style: none
+        }
+
+        :root {
+            --bg: #0B1320;
+            --surface-dark: #1E2A44;
+            --ink: #FFFFFF;
+            --ink-muted: rgba(255, 255, 255, 0.75);
+            --line: rgba(255, 255, 255, 0.12);
+            --gold: #EAB308;
+            --gold-2: #CA8A04;
+            --gold-soft: rgba(234, 179, 8, 0.15);
+            --r-xl: 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        /* HEADER / NAV */
+        #nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 14px 0;
+            background: rgba(11, 19, 32, .95);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 6px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px
+        }
+
+        .nav-links a {
+            font-size: .92rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, .85);
+            transition: color .2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold)
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .6em;
+            padding: .75em 1.4em;
+            border-radius: 999px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: .85rem;
+            background: linear-gradient(135deg, #EAB308, #CA8A04);
+            color: #0F172A;
+            transition: all .3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(202, 138, 4, .4)
+        }
+
+        /* HERO HEADER */
+        .page-hero {
+            background: linear-gradient(180deg, #0B1320 0%, #1E2A44 100%);
+            color: #fff;
+            padding-top: 140px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--gold-soft);
+            color: var(--gold);
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            margin-bottom: 16px;
+        }
+
+        .page-hero h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            padding: 30px 0 90px;
+            background: #0B1320;
+        }
+
+        .legal-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: var(--r-xl);
+            padding: clamp(30px, 5vw, 54px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-section {
+            margin-bottom: 32px;
+        }
+
+        .legal-section h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legal-section h2::before {
+            content: '';
+            width: 4px;
+            height: 18px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .legal-section h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .legal-section p {
+            color: var(--ink-muted);
+            font-size: 0.98rem;
+            line-height: 1.65;
+            margin-bottom: 10px;
+        }
+
+        .legal-section a {
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .legal-section a:hover {
+            color: #fff;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.12);
+            margin: 36px 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0B1320;
+            color: rgba(255, 255, 255, .65);
+            padding: 70px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .foot-grid {
+            display: grid;
+            grid-template-columns: 1.4fr repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 50px
+        }
+
+        .foot-brand img {
+            height: 44px;
+        }
+
+        .foot-brand p {
+            color: rgba(255, 255, 255, .6);
+            font-size: .92rem;
+            margin-top: 14px;
+        }
+
+        .foot-col h4 {
+            color: #fff;
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .foot-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .foot-col a {
+            font-size: .92rem;
+            color: rgba(255, 255, 255, .6);
+            transition: color .2s;
+        }
+
+        .foot-col a:hover {
+            color: var(--gold);
+        }
+
+        .foot-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .45);
+        }
+
+        @media (max-width: 980px) {
+            .nav-links {
+                display: none;
+            }
+
+            .foot-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .foot-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .foot-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
     <!-- HEADER -->
-    <header class="bg-slate-950/80 backdrop-blur-lg border-b border-yellow-600/20">
-      <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="index.html" class="flex items-center space-x-3">
-          <img src="src/images/logo.png" class="w-[100px] h-10 transition-transform duration-300 hover:scale-105" alt="King Fahrschule Logo" />
-        </a>
-        <a href="index.html" class="gold-gradient text-slate-900 px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition shadow-lg">Zurück zur Startseite</a>
-      </div>
+    <header id="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <img src="./src/images/logo.png" alt="King Fahrschule Logo">
+            </a>
+            <nav class="nav-links" aria-label="Navigation">
+                <a href="index.html#ausbildung">Ausbildung</a>
+                <a href="index.html#preise">Preise</a>
+                <a href="index.html#angebot" style="color: #F87171;">Angebot 🔥</a>
+                <a href="index.html#fahrzeuge">Fahrzeuge</a>
+                <a href="index.html#team">Fahrlehrer</a>
+                <a href="index.html#kontakt">Kontakt</a>
+            </nav>
+            <div class="nav-right">
+                <a href="index.html" class="btn-primary">← Zurück zur Startseite</a>
+            </div>
+        </div>
     </header>
 
-    <!-- CONTENT -->
-    <main class="flex-grow max-w-4xl mx-auto px-6 py-16">
-      <div class="glass rounded-3xl p-8 md:p-12 border border-slate-700 shadow-2xl animate-fade-up">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-8 text-transparent bg-clip-text gold-gradient">Datenschutzerklärung</h1>
-
-        <div class="space-y-8 text-slate-300 text-sm leading-relaxed">
-          <section>
-            <h2 class="text-xl font-bold text-yellow-400 mb-4">1. Datenschutz auf einen Blick</h2>
-            <h3 class="font-bold mb-2">Allgemeine Hinweise</h3>
-            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
-          </section>
-
-          <section>
-            <h2 class="text-xl font-bold text-yellow-400 mb-4">2. Hosting und Content Delivery Networks (CDN)</h2>
-            <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-            <p class="font-bold">GitHub Pages</p>
-            <p>Details entnehmen Sie der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" class="underline">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>.</p>
-          </section>
-
-          <section>
-            <h2 class="text-xl font-bold text-yellow-400 mb-4">3. Allgemeine Hinweise und Pflichtinformationen</h2>
-            <h3 class="font-bold mb-2">Verantwortliche Stelle</h3>
-            <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-            <p class="mt-2">King Fahrschule<br>
-            Bahnhofstraße 8<br>
-            56564 Neuwied<br>
-            Telefon: +49 174 9727442<br>
-            E-Mail: kingfahrschule@gmail.com</p>
-          </section>
-
-          <section>
-            <h2 class="text-xl font-bold text-yellow-400 mb-4">4. Datenerfassung auf dieser Website</h2>
-            <h3 class="font-bold mb-2">Cookies</h3>
-            <p>Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Datensätze und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.</p>
-
-            <h3 class="font-bold mt-4 mb-2">Kontaktformular</h3>
-            <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-          </section>
-
-          <section>
-            <h2 class="text-xl font-bold text-yellow-400 mb-4">5. Plugins und Tools</h2>
-            <h3 class="font-bold mb-2">Google Maps</h3>
-            <p>Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland. Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.</p>
-          </section>
-
-          <section>
-            <h2 class="text-xl font-bold text-yellow-400 mb-4">6. Ihre Rechte</h2>
-            <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.</p>
-          </section>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="badge">Rechtliches</span>
+            <h1>Datenschutzerklärung</h1>
         </div>
-      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main>
+        <div class="container">
+            <div class="legal-card">
+
+                <div class="legal-section">
+                    <h2>1. Datenschutz auf einen Blick</h2>
+                    <h3>Allgemeine Hinweise</h3>
+                    <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. Hosting und Content Delivery Networks (CDN)</h2>
+                    <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
+                    <p><strong style="color: #fff;">GitHub Pages</strong></p>
+                    <p>Details entnehmen Sie der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+                    <h3>Verantwortliche Stelle</h3>
+                    <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+                    <p style="margin-top: 8px;"><strong style="color: #fff;">King Fahrschule</strong><br>
+                    Bahnhofstraße 8<br>
+                    56564 Neuwied<br>
+                    Telefon: +49 174 9727442<br>
+                    E-Mail: <a href="mailto:kingfahrschule@gmail.com">kingfahrschule@gmail.com</a></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. Datenerfassung auf dieser Website</h2>
+                    <h3>Cookies</h3>
+                    <p>Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Datensätze und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.</p>
+
+                    <h3>Kontaktformular</h3>
+                    <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. Plugins und Tools</h2>
+                    <h3>Google Maps</h3>
+                    <p>Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland. Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. Ihre Rechte</h2>
+                    <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.</p>
+                </div>
+
+            </div>
+        </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="py-10 bg-slate-950/95 border-t border-slate-800 mt-12">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-gray-400">
-          <div class="flex flex-col items-center sm:items-start gap-2">
-            <p>© <span id="year"></span> King Fahrschule. Alle Rechte vorbehalten.</p>
-            <p>Mit Leidenschaft für sicheres Fahren gestaltet.</p>
-          </div>
-          <div class="flex items-center gap-6 font-medium">
-            <a href="index.html" class="hover:text-yellow-400 transition underline-offset-4 hover:underline">Startseite</a>
-            <a href="impressum.html" class="hover:text-yellow-400 transition underline-offset-4 hover:underline">Impressum</a>
-            <a href="datenschutz.html" class="hover:text-yellow-400 transition underline-offset-4 hover:underline">Datenschutz</a>
-          </div>
+    <footer>
+        <div class="container">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="./src/images/logo.png" alt="King Fahrschule Logo">
+                    <p>King Fahrschule Neuwied – Ihr königlicher Weg zur mobilen Freiheit.</p>
+                </div>
+                <div class="foot-col">
+                    <h4>Ausbildung</h4>
+                    <ul>
+                        <li><a href="index.html#preise">Klasse B</a></li>
+                        <li><a href="index.html#preise">Klasse BE</a></li>
+                        <li><a href="index.html#angebot">Aktionen</a></li>
+                    </ul>
+                </div>
+                <div class="foot-col">
+                    <h4>Fahrschule</h4>
+                    <ul>
+                        <li><a href="index.html#ueber">Über uns</a></li>
+                        <li><a href="index.html#fahrzeuge">Fahrzeuge</a></li>
+                        <li><a href="index.html#team">Fahrlehrer</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="foot-col">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <div>© 2026 King Fahrschule. Alle Rechte vorbehalten.</div>
+                <div>Bahnhofstraße 8, 56564 Neuwied</div>
+            </div>
         </div>
-      </div>
     </footer>
+</body>
 
-    <!-- Cookie Banner -->
-    <div id="cookieBanner" class="fixed bottom-0 left-0 w-full z-[1000] p-4 translate-y-full transition-transform duration-500 ease-out">
-      <div class="max-w-4xl mx-auto glass border border-yellow-600/30 rounded-2xl p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="text-sm text-gray-200">
-          <p>Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und den Verkehr auf unserer Website zu analysieren. Weitere Informationen finden Sie in unserer <a href="datenschutz.html" class="underline text-yellow-400">Datenschutzerklärung</a>.</p>
-        </div>
-        <div class="flex gap-3 shrink-0">
-          <button id="acceptCookies" class="gold-gradient text-slate-900 px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition shadow-lg">Akzeptieren</button>
-          <button id="declineCookies" class="border border-slate-600 text-gray-400 px-6 py-2 rounded-full font-bold text-sm hover:bg-slate-800 transition">Ablehnen</button>
-        </div>
-      </div>
-    </div>
-
-    <script src="src/scripts/script.js"></script>
-  </body>
 </html>
