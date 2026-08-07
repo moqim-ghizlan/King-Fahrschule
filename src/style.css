@@ -540,7 +540,7 @@
             padding-top: 170px;
             padding-bottom: 180px;
             color: #fff;
-            background: #0B1320 url('./src/images/hero_bg.webp') center center / cover no-repeat;
+            background: #0B1320 url('./images/hero_bg.webp') center center / cover no-repeat;
             min-height: 100vh;
             display: flex;
             align-items: center
