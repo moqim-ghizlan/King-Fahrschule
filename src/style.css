@@ -152,11 +152,12 @@
             font-weight: 600;
             font-size: .95rem;
             letter-spacing: .01em;
-            line-height: 1;
+            line-height: 1.2;
             transition: all .4s cubic-bezier(.22, 1, .36, 1);
             cursor: pointer;
-            white-space: nowrap;
-            border: 1px solid transparent
+            border: 1px solid transparent;
+            max-width: 100%;
+            text-align: center;
         }
 
         .btn .arrow {
@@ -1347,24 +1348,36 @@
         .cta-inner {
             position: relative;
             z-index: 2;
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             gap: 24px;
-            align-items: center
+            align-items: center;
         }
 
         .cta-inner h2 {
             color: #fff;
-            margin-bottom: 14px;
-            font-size: clamp(1.4rem, 4vw, 2.2rem);
+            margin-bottom: 12px;
+            font-size: clamp(1.3rem, 3.8vw, 2.2rem);
+            line-height: 1.25;
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
 
         .cta-inner p {
             color: rgba(255, 255, 255, .85);
-            font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+            font-size: clamp(0.88rem, 2vw, 1.05rem);
             line-height: 1.5;
+        }
+
+        .cta-btn-wrap {
+            flex-shrink: 0;
+        }
+
+        .cta-btn {
+            white-space: normal !important;
+            text-align: center;
+            max-width: 100%;
         }
 
         /* ============ CONTACT ============ */
@@ -1517,28 +1530,136 @@
         /* Responsive Media Queries */
         @media (max-width: 980px) {
 
+            /* --- Hide desktop nav items --- */
+            .nav-links,
+            .nav-phone,
+            .nav-right .btn,
+            .nav-right .lang-switch {
+                display: none;
+            }
+
+            .hbg {
+                display: flex;
+            }
+
+            /* --- Grids → single column --- */
             .course-grid,
             .about-grid,
             .erlebnis-grid,
             .contact-grid,
-            .cta-inner,
             .foot-grid {
                 grid-template-columns: 1fr;
             }
 
-            .process-grid,
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .stats-bar,
             .testi-grid,
             .faq-grid {
                 grid-template-columns: 1fr;
             }
 
-            .nav-links,
-            .nav-phone,
-            .nav-right .lang-switch {
+            /* --- CTA Banner --- */
+            .cta-inner {
+                flex-direction: column;
+                text-align: center;
+                align-items: stretch;
+            }
+
+            .cta-btn-wrap,
+            .cta-btn {
+                width: 100%;
+            }
+
+            /* --- About section --- */
+            .about-text {
+                text-align: center;
+            }
+
+            .usp-list {
+                grid-template-columns: 1fr;
+            }
+
+            .usp {
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .about-img .floating-card {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -16px;
+                white-space: nowrap;
+            }
+
+            /* --- Full-width buttons on sections --- */
+            #ueber .btn,
+            #fahrzeuge .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* --- Stats bar on mobile --- */
+            .stats-bar {
+                padding: 24px 16px;
+                gap: 16px;
+            }
+
+            .stat:not(:last-child)::after {
                 display: none;
             }
 
+            /* --- Hero trust strip wrap --- */
+            .hero-trust {
+                flex-wrap: wrap;
+                max-width: 100%;
+            }
+
+            .hero-trust .ht {
+                flex: 1 1 33%;
+                min-width: 0;
+            }
+
+            /* --- Hero CTA full width --- */
+            .hero-cta .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* --- Erlebnis collage height on tablet --- */
+            .erlebnis-collage {
+                height: 340px;
+            }
+
+            /* --- Hero padding --- */
+            #hero {
+                padding-top: 140px;
+                padding-bottom: 100px;
+            }
+
+            #stats-section {
+                margin-top: 0;
+            }
+
+            /* --- Footer bottom: stack --- */
+            .foot-bottom {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            /* --- Contact info padding on mobile --- */
+            .contact-info {
+                padding: 28px 20px;
+            }
+
+            .contact-form {
+                padding: 28px 20px;
+            }
+
+            /* --- Lang switch in mnav --- */
             #mnav .lang-switch {
                 display: block;
                 margin-top: 10px;
@@ -1556,21 +1677,37 @@
                 transform: translateX(-50%) translateY(0);
             }
 
-            .hbg {
-                display: flex;
+            /* --- Course card buttons --- */
+            .course-card .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .process-grid {
+                grid-template-columns: 1fr;
             }
 
-            .erlebnis-collage {
-                height: 340px;
+            .hero-trust .ht+.ht::before {
+                display: none;
             }
 
-            #hero {
-                padding-top: 140px;
-                padding-bottom: 100px;
+            .hero-trust {
+                gap: 16px;
+                padding: 16px 10px;
             }
 
-            #stats-section {
-                margin-top: 0;
+            .hero-trust .ht {
+                flex: 1 1 100%;
+            }
+
+            .testi-photo {
+                height: 160px;
+            }
+
+            .about-grid {
+                gap: 40px;
             }
         }
 
