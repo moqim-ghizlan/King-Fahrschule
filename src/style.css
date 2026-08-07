@@ -300,13 +300,17 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 800;
             font-size: 1.2rem;
-            color: #fff
+            color: #fff;
+            flex-shrink: 0;
         }
 
         .logo img {
-            height: 40px;
+            height: 42px;
             width: auto;
+            max-width: none;
+            object-fit: contain;
             border-radius: 6px;
+            flex-shrink: 0;
         }
 
         .nav-links {
@@ -431,29 +435,7 @@
             color: var(--gold);
         }
 
-        .m-lang-row {
-            display: flex;
-            gap: 8px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .m-lang-opt {
-            padding: 8px 14px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .m-lang-opt[aria-selected="true"], .m-lang-opt:hover {
-            background: var(--gold);
-            color: #0F172A;
-            border-color: var(--gold);
-        }
+
 
         /* RTL Support for Arabic */
         html[dir="rtl"] body {
@@ -527,7 +509,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 26px;
+            gap: 20px;
+            padding: 40px 20px;
+            overflow-y: auto;
             opacity: 0;
             pointer-events: none;
             transition: opacity .3s
@@ -540,7 +524,6 @@
 
         #mnav a {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.5rem;
             font-weight: 700;
             color: #fff
         }
@@ -588,30 +571,35 @@
             color: var(--gold);
             padding: 8px 18px;
             border-radius: var(--r-full);
-            font-size: 0.8rem;
+            font-size: clamp(0.68rem, 2.5vw, 0.8rem);
             font-weight: 700;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
             margin-bottom: 24px;
+            max-width: 100%;
+            text-align: center;
         }
 
         .hero-headline {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 800;
             letter-spacing: -.02em;
-            line-height: 1.05;
-            font-size: clamp(2.6rem, 6.8vw, 5.2rem);
+            line-height: 1.1;
             margin-bottom: 28px;
-            color: #fff
+            color: #fff;
         }
 
         .hero-headline .gold-text {
             color: var(--gold);
-            font-size: 60px;
+            font-size: clamp(2rem, 7.5vw, 3.75rem);
+            display: inline-block;
         }
 
         .hero-headline .sub-text {
-            font-size: 40px;
+            font-size: clamp(1.25rem, 5vw, 2.5rem);
+            display: inline-block;
+            line-height: 1.25;
+            margin-top: 8px;
         }
 
         .hero-lead {
@@ -1542,8 +1530,26 @@
             }
 
             .nav-links,
-            .nav-phone {
+            .nav-phone,
+            .nav-right .lang-switch {
                 display: none;
+            }
+
+            #mnav .lang-switch {
+                display: block;
+                margin-top: 10px;
+                position: relative;
+            }
+
+            #mnav .lang-menu {
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%) translateY(-8px);
+                top: calc(100% + 8px);
+            }
+
+            #mnav .lang-switch.open .lang-menu {
+                transform: translateX(-50%) translateY(0);
             }
 
             .hbg {

@@ -796,8 +796,9 @@
             var tt = t(lang, "meta.title"); if (tt) document.title = tt;
             var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", t(lang, "meta.desc"));
 
-            var cur = document.getElementById("langCurrent");
-            if (cur) cur.textContent = LANG_LABELS[lang] || lang.toUpperCase();
+            document.querySelectorAll(".lang-current, #langCurrent").forEach(function (cur) {
+                cur.textContent = LANG_LABELS[lang] || lang.toUpperCase();
+            });
 
             document.querySelectorAll(".lang-opt, .m-lang-opt").forEach(function (b) {
                 b.setAttribute("aria-selected", b.getAttribute("data-lang") === lang ? "true" : "false");
@@ -824,33 +825,39 @@
             } catch (e) {}
             applyLanguage(start);
 
-            var sw = document.getElementById("langSwitch");
-            var tog = document.getElementById("langToggle");
-            if (sw && tog) {
-                tog.addEventListener("click", function (e) {
-                    e.stopPropagation();
-                    var open = sw.classList.toggle("open");
-                    tog.setAttribute("aria-expanded", open ? "true" : "false");
-                });
-                document.addEventListener("click", function (e) {
-                    if (!sw.contains(e.target)) {
+            document.querySelectorAll(".lang-switch").forEach(function (sw) {
+                var tog = sw.querySelector(".lang-toggle");
+                if (tog) {
+                    tog.addEventListener("click", function (e) {
+                        e.stopPropagation();
+                        // Close other switches if open
+                        document.querySelectorAll(".lang-switch").forEach(function (otherSw) {
+                            if (otherSw !== sw) {
+                                otherSw.classList.remove("open");
+                                var otherTog = otherSw.querySelector(".lang-toggle");
+                                if (otherTog) otherTog.setAttribute("aria-expanded", "false");
+                            }
+                        });
+                        var open = sw.classList.toggle("open");
+                        tog.setAttribute("aria-expanded", open ? "true" : "false");
+                    });
+                }
+                sw.querySelectorAll(".lang-opt").forEach(function (b) {
+                    b.addEventListener("click", function () {
+                        applyLanguage(b.getAttribute("data-lang"));
                         sw.classList.remove("open");
-                        tog.setAttribute("aria-expanded", "false");
-                    }
-                });
-            }
-
-            document.querySelectorAll(".lang-opt").forEach(function (b) {
-                b.addEventListener("click", function () {
-                    applyLanguage(b.getAttribute("data-lang"));
-                    if (sw) sw.classList.remove("open");
-                    if (tog) tog.setAttribute("aria-expanded", "false");
+                        if (tog) tog.setAttribute("aria-expanded", "false");
+                    });
                 });
             });
 
-            document.querySelectorAll(".m-lang-opt").forEach(function (b) {
-                b.addEventListener("click", function () {
-                    applyLanguage(b.getAttribute("data-lang"));
+            document.addEventListener("click", function (e) {
+                document.querySelectorAll(".lang-switch").forEach(function (sw) {
+                    if (!sw.contains(e.target)) {
+                        sw.classList.remove("open");
+                        var tog = sw.querySelector(".lang-toggle");
+                        if (tog) tog.setAttribute("aria-expanded", "false");
+                    }
                 });
             });
         }
