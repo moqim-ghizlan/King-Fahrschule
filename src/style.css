@@ -1848,17 +1848,19 @@
             border-radius: var(--r-xl);
             box-shadow: var(--shadow-lg);
             background: #0B1320;
+            direction: ltr; /* isolate slider from RTL page direction */
         }
 
         .slider-track {
             display: flex;
+            width: 100%; /* explicit width so child % resolves correctly */
             transition: transform 700ms cubic-bezier(.25, .46, .45, .94);
             will-change: transform;
         }
 
         .slider-slide {
-            min-width: 100%;
-            flex-shrink: 0;
+            flex: 0 0 100%; /* grow:0 shrink:0 basis:100% — never breaks on reflow */
+            width: 100%;
             position: relative;
         }
 
